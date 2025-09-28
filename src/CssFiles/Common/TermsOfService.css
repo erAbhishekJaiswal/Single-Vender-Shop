@@ -1,0 +1,111 @@
+/* Terms of Service Page Styling */
+.tos-page {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tos-container {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.7s ease-in-out;
+}
+
+.tos-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #222;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.tos-updated {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.tos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.tos-section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2575fc;
+  margin-bottom: 0.6rem;
+  border-left: 4px solid #6a11cb;
+  padding-left: 0.6rem;
+}
+
+.tos-section p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tos-section a {
+  color: #6a11cb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tos-section a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tos-container {
+    padding: 2rem;
+  }
+
+  .tos-title {
+    font-size: 2rem;
+  }
+
+  .tos-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .tos-section p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tos-container {
+    padding: 1.5rem;
+  }
+
+  .tos-title {
+    font-size: 1.7rem;
+  }
+
+  .tos-updated {
+    font-size: 0.8rem;
+  }
+}

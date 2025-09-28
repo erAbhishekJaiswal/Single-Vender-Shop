@@ -1,0 +1,140 @@
+.ecom-product-grid {
+  margin-bottom: 2rem;
+}
+
+.ecom-product-grid__container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ecom-product-grid__container--grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.ecom-product-grid__container--list {
+  grid-template-columns: 1fr;
+}
+
+/* Skeleton Loading */
+.ecom-product-grid__skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.ecom-product-grid__skeleton-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.ecom-product-grid__skeleton-image {
+  width: 100%;
+  height: 200px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  animation: ecom-product-grid-skeleton-pulse 1.5s infinite;
+}
+
+.ecom-product-grid__skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ecom-product-grid__skeleton-title {
+  height: 20px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  animation: ecom-product-grid-skeleton-pulse 1.5s infinite;
+}
+
+.ecom-product-grid__skeleton-price {
+  height: 24px;
+  width: 80px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  animation: ecom-product-grid-skeleton-pulse 1.5s infinite;
+}
+
+.ecom-product-grid__skeleton-rating {
+  height: 16px;
+  width: 120px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  animation: ecom-product-grid-skeleton-pulse 1.5s infinite;
+}
+
+@keyframes ecom-product-grid-skeleton-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Empty State */
+.ecom-product-grid__empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.ecom-product-grid__empty-icon {
+  font-size: 4rem;
+  color: #e9ecef;
+  margin-bottom: 1.5rem;
+}
+
+.ecom-product-grid__empty-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.ecom-product-grid__empty-text {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ecom-product-grid__empty-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ecom-product-grid__empty-btn:hover {
+  background: #5a6fd8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ecom-product-grid__container--grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ecom-product-grid__container--grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecom-product-grid__container--grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ecom-product-grid__skeleton {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,211 @@
+.ecom-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.ecom-loader--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+.ecom-loader-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecom-loader--fullscreen {
+  padding: 4rem;
+}
+
+.ecom-loader__spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.ecom-loader__bounce1,
+.ecom-loader__bounce2,
+.ecom-loader__bounce3 {
+  border-radius: 50%;
+  animation: ecom-loader-bounce 1.4s infinite ease-in-out both;
+}
+
+.ecom-loader__bounce1 {
+  animation-delay: -0.32s;
+}
+
+.ecom-loader__bounce2 {
+  animation-delay: -0.16s;
+}
+
+/* Sizes */
+.ecom-loader--small .ecom-loader__bounce1,
+.ecom-loader--small .ecom-loader__bounce2,
+.ecom-loader--small .ecom-loader__bounce3 {
+  width: 6px;
+  height: 6px;
+}
+
+.ecom-loader--medium .ecom-loader__bounce1,
+.ecom-loader--medium .ecom-loader__bounce2,
+.ecom-loader--medium .ecom-loader__bounce3 {
+  width: 10px;
+  height: 10px;
+}
+
+.ecom-loader--large .ecom-loader__bounce1,
+.ecom-loader--large .ecom-loader__bounce2,
+.ecom-loader--large .ecom-loader__bounce3 {
+  width: 14px;
+  height: 14px;
+}
+
+/* Colors */
+.ecom-loader--primary .ecom-loader__bounce1,
+.ecom-loader--primary .ecom-loader__bounce2,
+.ecom-loader--primary .ecom-loader__bounce3 {
+  background: #667eea;
+}
+
+.ecom-loader--secondary .ecom-loader__bounce1,
+.ecom-loader--secondary .ecom-loader__bounce2,
+.ecom-loader--secondary .ecom-loader__bounce3 {
+  background: #6c757d;
+}
+
+.ecom-loader--white .ecom-loader__bounce1,
+.ecom-loader--white .ecom-loader__bounce2,
+.ecom-loader--white .ecom-loader__bounce3 {
+  background: white;
+}
+
+@keyframes ecom-loader-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.ecom-loader__text {
+  margin: 1rem 0 0 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Skeleton Loader */
+.ecom-skeleton {
+  width: 100%;
+}
+
+.ecom-skeleton__item {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: ecom-skeleton-loading 1.5s infinite;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.ecom-skeleton__item--text {
+  height: 1rem;
+}
+
+.ecom-skeleton__item--title {
+  height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ecom-skeleton__item--avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.ecom-skeleton__item--image {
+  height: 200px;
+  border-radius: 8px;
+}
+
+.ecom-skeleton__item--button {
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+}
+
+@keyframes ecom-skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Button Loader */
+.ecom-button-loader {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecom-button-loader__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  animation: ecom-button-loader-spin 1s linear infinite;
+}
+
+.ecom-button-loader--small .ecom-button-loader__spinner {
+  width: 14px;
+  height: 14px;
+}
+
+.ecom-button-loader--large .ecom-button-loader__spinner {
+  width: 20px;
+  height: 20px;
+}
+
+.ecom-button-loader--white .ecom-button-loader__spinner {
+  border-top-color: white;
+}
+
+.ecom-button-loader--primary .ecom-button-loader__spinner {
+  border-top-color: #667eea;
+}
+
+@keyframes ecom-button-loader-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ecom-loader--fullscreen {
+    padding: 2rem;
+  }
+  
+  .ecom-loader__text {
+    font-size: 0.8rem;
+  }
+}

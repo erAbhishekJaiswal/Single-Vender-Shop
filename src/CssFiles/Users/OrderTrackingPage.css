@@ -1,0 +1,258 @@
+.ecom-order-tracking-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 0;
+}
+
+.ecom-order-tracking-page__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.ecom-order-tracking-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.ecom-order-tracking-page__header-content {
+  flex: 1;
+}
+
+.ecom-order-tracking-page__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.ecom-order-tracking-page__subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.ecom-order-tracking-page__header-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.ecom-order-tracking-page__stat {
+  text-align: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.ecom-order-tracking-page__stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+  line-height: 1;
+}
+
+.ecom-order-tracking-page__stat-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+.ecom-order-tracking-page__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+
+.ecom-order-tracking-page__filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ecom-order-tracking-page__filter-btn {
+  background: white;
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ecom-order-tracking-page__filter-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.ecom-order-tracking-page__filter-btn--active {
+  background: #667eea;
+  border-color: #667eea;
+  color: white;
+}
+
+.ecom-order-tracking-page__filter-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.ecom-order-tracking-page__search {
+  flex: 0 1 300px;
+}
+
+.ecom-order-tracking-page__search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ecom-order-tracking-page__search-icon {
+  position: absolute;
+  left: 1rem;
+  color: #6c757d;
+  z-index: 1;
+}
+
+.ecom-order-tracking-page__search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 2px solid #e9ecef;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.ecom-order-tracking-page__search-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.ecom-order-tracking-page__search-clear {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.ecom-order-tracking-page__search-clear:hover {
+  background: #f8f9fa;
+}
+
+.ecom-order-tracking-page__content {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.ecom-order-tracking-page__empty {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.ecom-order-tracking-page__empty-icon {
+  font-size: 4rem;
+  color: #e9ecef;
+  margin-bottom: 1.5rem;
+}
+
+.ecom-order-tracking-page__empty-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.ecom-order-tracking-page__empty-text {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ecom-order-tracking-page__empty-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ecom-order-tracking-page__empty-btn:hover {
+  background: #5a6fd8;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .ecom-order-tracking-page__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .ecom-order-tracking-page__controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .ecom-order-tracking-page__search {
+    flex: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecom-order-tracking-page {
+    padding: 1rem 0;
+  }
+  
+  .ecom-order-tracking-page__title {
+    font-size: 2rem;
+  }
+  
+  .ecom-order-tracking-page__filters {
+    justify-content: center;
+  }
+  
+  .ecom-order-tracking-page__filter-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecom-order-tracking-page__container {
+    padding: 0 0.5rem;
+  }
+  
+  .ecom-order-tracking-page__header {
+    padding: 0 0.5rem;
+  }
+  
+  .ecom-order-tracking-page__stat {
+    padding: 0.75rem 1rem;
+  }
+  
+  .ecom-order-tracking-page__stat-number {
+    font-size: 1.5rem;
+  }
+}

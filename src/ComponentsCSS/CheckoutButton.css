@@ -1,0 +1,150 @@
+.ecom-checkout-button__container {
+  width: 100%;
+}
+
+.ecom-checkout-button {
+  width: 100%;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  padding: 1.25rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.ecom-checkout-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+  background: linear-gradient(135deg, #45a049 0%, #4caf50 100%);
+}
+
+.ecom-checkout-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ecom-checkout-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ecom-checkout-button--loading {
+  background: #6c757d;
+  cursor: wait;
+}
+
+.ecom-checkout-button--loading:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.ecom-checkout-button__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: ecom-checkout-button-spin 1s linear infinite;
+}
+
+@keyframes ecom-checkout-button-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ecom-checkout-button__text {
+  font-size: 1.2rem;
+}
+
+.ecom-checkout-button__total {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  backdrop-filter: blur(10px);
+}
+
+.ecom-checkout-button__payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.ecom-checkout-button__payment-icons--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ecom-checkout-button__payment-icons i {
+  font-size: 1.5rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.ecom-checkout-button__payment-icons i:hover {
+  color: #4caf50;
+}
+
+.ecom-checkout-button__info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f8f9fa;
+}
+
+.ecom-checkout-button__info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.ecom-checkout-button__info-item:last-child {
+  margin-bottom: 0;
+}
+
+.ecom-checkout-button__info-item i {
+  color: #4caf50;
+  width: 16px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ecom-checkout-button {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .ecom-checkout-button__text {
+    font-size: 1.1rem;
+  }
+  
+  .ecom-checkout-button__total {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .ecom-checkout-button__payment-icons {
+    gap: 0.75rem;
+  }
+  
+  .ecom-checkout-button__payment-icons i {
+    font-size: 1.3rem;
+  }
+}

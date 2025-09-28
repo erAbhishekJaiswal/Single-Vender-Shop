@@ -1,0 +1,198 @@
+.ecom-submit-booking {
+  text-align: center;
+  animation: ecom-submit-booking-fadeIn 0.3s ease;
+}
+
+@keyframes ecom-submit-booking-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ecom-submit-booking__summary {
+  margin-bottom: 2rem;
+}
+
+.ecom-submit-booking__title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ecom-submit-booking__details {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ecom-submit-booking__detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.ecom-submit-booking__detail-item:last-child {
+  border-bottom: none;
+}
+
+.ecom-submit-booking__terms {
+  text-align: left;
+}
+
+.ecom-submit-booking__terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: border-color 0.3s ease;
+}
+
+.ecom-submit-booking__terms-label:hover {
+  border-color: #667eea;
+}
+
+.ecom-submit-booking__terms-checkbox {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.ecom-submit-booking__terms-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+.ecom-submit-booking__terms-text a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.ecom-submit-booking__terms-text a:hover {
+  text-decoration: underline;
+}
+
+.ecom-submit-booking__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.ecom-submit-booking__btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.ecom-submit-booking__btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ecom-submit-booking__btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ecom-submit-booking__btn--loading {
+  background: #6c757d;
+  cursor: wait;
+}
+
+.ecom-submit-booking__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: ecom-submit-booking-spin 1s linear infinite;
+}
+
+@keyframes ecom-submit-booking-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ecom-submit-booking__processing {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  animation: ecom-submit-booking-pulse 2s infinite;
+}
+
+@keyframes ecom-submit-booking-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.ecom-submit-booking__processing-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.ecom-submit-booking__info {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ecom-submit-booking__info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ecom-submit-booking__btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .ecom-submit-booking__terms-label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .ecom-submit-booking__terms-checkbox {
+    align-self: flex-start;
+  }
+}

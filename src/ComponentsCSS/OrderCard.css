@@ -1,0 +1,372 @@
+.ecom-order-card {
+  border-bottom: 1px solid #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.ecom-order-card:last-child {
+  border-bottom: none;
+}
+
+.ecom-order-card--expanded {
+  background: #fafbfc;
+}
+
+.ecom-order-card__header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ecom-order-card__header:hover {
+  background: #f8f9fa;
+}
+
+.ecom-order-card--expanded .ecom-order-card__header {
+  background: #f1f3f4;
+}
+
+.ecom-order-card__basic-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ecom-order-card__id-date {
+  flex: 1;
+}
+
+.ecom-order-card__id {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.25rem 0;
+}
+
+.ecom-order-card__date {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.ecom-order-card__items-preview {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ecom-order-card__item-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #f8f9fa;
+}
+
+.ecom-order-card__more-items {
+  font-size: 0.8rem;
+  color: #6c757d;
+  background: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.ecom-order-card__status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ecom-order-card__total-amount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.ecom-order-card__expand-btn {
+  background: none;
+  border: none;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecom-order-card__expand-btn:hover {
+  background: #e9ecef;
+  color: #2c3e50;
+}
+
+/* Expanded Content */
+.ecom-order-card__expanded-content {
+  padding: 0 2rem 2rem;
+  animation: ecom-order-card-slideDown 0.3s ease;
+}
+
+@keyframes ecom-order-card-slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ecom-order-card__tracking {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ecom-order-card__tracking-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.ecom-order-card__progress-bar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.ecom-order-card__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.ecom-order-card__progress-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ecom-order-card__progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ecom-order-card__step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.ecom-order-card__step-icon--completed {
+  background: #4caf50;
+  color: white;
+}
+
+.ecom-order-card__step-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.ecom-order-card__items {
+  margin-bottom: 2rem;
+}
+
+.ecom-order-card__items-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.ecom-order-card__items-list {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ecom-order-card__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.ecom-order-card__item:last-child {
+  border-bottom: none;
+}
+
+.ecom-order-card__item-detail-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #f8f9fa;
+}
+
+.ecom-order-card__item-info {
+  flex: 1;
+}
+
+.ecom-order-card__item-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 0.25rem 0;
+}
+
+.ecom-order-card__item-quantity {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.ecom-order-card__item-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.ecom-order-card__details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ecom-order-card__detail-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ecom-order-card__detail-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+}
+
+.ecom-order-card__detail-content {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.ecom-order-card__tracking-number {
+  background: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+  margin-left: 0.5rem;
+}
+
+.ecom-order-card__action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ecom-order-card__action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: white;
+  color: #6c757d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ecom-order-card__action-btn--secondary:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .ecom-order-card__header {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+  
+  .ecom-order-card__status,
+  .ecom-order-card__total {
+    display: none;
+  }
+  
+  .ecom-order-card__progress-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+  }
+  
+  .ecom-order-card__details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecom-order-card__header {
+    padding: 1rem;
+  }
+  
+  .ecom-order-card__expanded-content {
+    padding: 0 1rem 1rem;
+  }
+  
+  .ecom-order-card__basic-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .ecom-order-card__action-buttons {
+    flex-direction: column;
+  }
+  
+  .ecom-order-card__action-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecom-order-card__progress-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .ecom-order-card__item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,349 @@
+/* .ecom-navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.ecom-navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.ecom-navbar__logo h2 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ecom-navbar__search {
+  display: flex;
+  align-items: center;
+  flex: 0 1 400px;
+  border: 1px solid #e9ecef;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.ecom-navbar__search-input {
+  padding: 0.3rem 1rem;
+  color: white;
+  border-radius: 25px 0 0 25px;
+  width: 100%;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.ecom-navbar__search-btn {
+  background: #ff6b6b;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 25px 25px 0;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ecom-navbar__search-btn:hover {
+  background: #ff5252;
+}
+
+.ecom-navbar__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.ecom-navbar__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.ecom-navbar__link:hover {
+  color: #ffd700;
+  background: rgba(255,255,255,0.1);
+}
+
+.ecom-navbar__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.ecom-navbar__icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.ecom-navbar__icon-btn:hover {
+  color: #ffd700;
+  background: rgba(255,255,255,0.1);
+}
+
+.ecom-navbar__icon-text {
+  font-size: 0.7rem;
+}
+
+.ecom-navbar__toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.ecom-navbar__toggle-bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+  .ecom-navbar__container {
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .ecom-navbar__search {
+    order: 3;
+    flex: 1 1 100%;
+    margin-top: 1rem;
+  }
+
+  .ecom-navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .ecom-navbar__menu--active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .ecom-navbar__toggle {
+    display: flex;
+  }
+
+  .ecom-navbar__icons {
+    gap: 0.5rem;
+  }
+
+  .ecom-navbar__icon-text {
+    display: none;
+  }
+} */
+
+
+
+
+
+.ecom-navbar {
+  background: rgb(87 87 205 / 90%);
+  backdrop-filter: blur(10px);
+  padding: 0.8rem 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.ecom-navbar__container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.ecom-navbar__logo h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* 🔍 Search */
+.ecom-navbar__search {
+  display: flex;
+  align-items: center;
+  flex: 0 1 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.ecom-navbar__search-input {
+  padding: 0.7rem 1rem;
+  border: none;
+  color: #fff;
+  background: transparent;
+  width: 100%;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.ecom-navbar__search-input::placeholder {
+  color: #ccc;
+}
+
+.ecom-navbar__search-btn {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.ecom-navbar__search-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #e76f51, #d62828);
+}
+
+/* 🌐 Navigation Links */
+.ecom-navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.ecom-navbar__link {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.ecom-navbar__link:hover {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  color: #fff;
+}
+
+/* 🛒 Icons */
+.ecom-navbar__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.ecom-navbar__icon-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ecom-navbar__icon-btn:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.ecom-navbar__icon-btn span {
+  font-size: 0.75rem;
+  color: #ddd;
+}
+
+/* 📱 Mobile */
+.ecom-navbar__toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.ecom-navbar__toggle-bar {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ecom-navbar__container {
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .ecom-navbar__search {
+    order: 3;
+    flex: 1 1 100%;
+    margin-top: 1rem;
+  }
+
+  .ecom-navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(94 94 207 / 95%);
+    padding: 1rem 0;
+    transform: translateY(-110%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .ecom-navbar__menu--active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .ecom-navbar__toggle {
+    display: flex;
+  }
+
+  .ecom-navbar__icons span {
+    display: none;
+  }
+}

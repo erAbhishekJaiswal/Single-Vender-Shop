@@ -1,0 +1,216 @@
+.ecom-footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  margin-top: auto;
+}
+
+.ecom-footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 1rem;
+}
+
+.ecom-footer__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ecom-footer__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.ecom-footer__logo h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.ecom-footer__description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.ecom-footer__social {
+  display: flex;
+  gap: 1rem;
+}
+
+.ecom-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ecom-footer__social-link:hover {
+  background: #ffd700;
+  color: #2c3e50;
+  transform: translateY(-2px);
+}
+
+.ecom-footer__title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.ecom-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ecom-footer__links li {
+  margin-bottom: 0.8rem;
+}
+
+.ecom-footer__link {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.ecom-footer__link:hover {
+  color: #ffd700;
+  padding-left: 5px;
+}
+
+.ecom-footer__newsletter-text {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ecom-footer__newsletter {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.ecom-footer__newsletter-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.ecom-footer__newsletter-btn {
+  background: #ff6b6b;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 25px 25px 0;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ecom-footer__newsletter-btn:hover {
+  background: #ff5252;
+}
+
+.ecom-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ecom-footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.ecom-footer__contact-item i {
+  color: #ffd700;
+  width: 16px;
+}
+
+.ecom-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ecom-footer__copyright p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.ecom-footer__payment {
+  display: flex;
+  gap: 1rem;
+}
+
+.ecom-footer__payment-icon {
+  font-size: 2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.ecom-footer__payment-icon:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ecom-footer__container {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .ecom-footer__main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ecom-footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ecom-footer__newsletter {
+    flex-direction: column;
+  }
+
+  .ecom-footer__newsletter-input {
+    border-radius: 25px;
+    margin-bottom: 0.5rem;
+  }
+
+  .ecom-footer__newsletter-btn {
+    border-radius: 25px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecom-footer__social {
+    justify-content: center;
+  }
+
+  .ecom-footer__payment {
+    justify-content: center;
+  }
+}

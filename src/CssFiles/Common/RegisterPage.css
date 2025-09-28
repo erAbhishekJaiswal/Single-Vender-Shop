@@ -1,0 +1,319 @@
+:root {
+  --primary-bg: #0f172a;
+  --secondary-bg: rgba(30, 41, 59, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --card-bg: rgba(30, 41, 59, 0.5);
+  --primary-accent: #3b82f6;
+  --secondary-accent: #818cf8;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glow-color: rgba(59, 130, 246, 0.4);
+  --success-color: #10b981;
+  --error-color: #ef4444;
+}
+
+/* Vendor Register Container */
+.vendor-register-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.vendor-register-container.futuristic-auth {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Card */
+.vendor-register-card {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
+              0 0 20px var(--glow-color);
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.vendor-register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #3f3f3f;
+}
+
+.vendor-register-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.vendor-register-logo .vendor-register-logo-text {
+  font-weight: 700;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #ff0000, #6f6f6f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vendor-register-header h2 {
+  font-size: 1.8rem;
+}
+
+.vendor-register-header p {
+  color: #131313;
+}
+
+/* Form */
+.vendor-register-form {
+  margin-bottom: 1.5rem;
+}
+
+.vendor-register-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.vendor-register-form-group label {
+  margin-bottom: 0.5rem;
+  color: #131313;
+  font-weight: 500;
+}
+
+.vendor-register-input-container {
+  position: relative;
+}
+
+.vendor-register-input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem;;
+  /* background: #1313131f; */
+  border: 1px solid #21212133;
+  border-radius: 8px;
+  color: #212121;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.vendor-register-input:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px var(--glow-color);
+}
+
+.vendor-register-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Checkbox */
+.vendor-register-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+}
+
+.vendor-register-checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  position: relative;
+}
+
+.vendor-register-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.vendor-register-checkmark {
+  height: 18px;
+  width: 18px;
+  min-width: 18px;
+  background: var(--glass-bg);
+  border: 1px solid #21212173;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  position: relative;
+  top: 2px;
+}
+
+.vendor-register-checkbox-container input:checked ~ .vendor-register-checkmark {
+  background: var(--primary-accent);
+  border-color: var(--primary-accent);
+}
+
+.vendor-register-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.vendor-register-checkbox-container input:checked ~ .vendor-register-checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: block;
+}
+
+.vendor-register-checkbox-container a {
+  color: var(--primary-accent);
+  text-decoration: none;
+}
+
+.vendor-register-checkbox-container a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.vendor-register-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.vendor-register-primary-btn {
+  background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+  color: white;
+}
+
+.vendor-register-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--glow-color);
+}
+
+/* Footer */
+.vendor-register-footer {
+  text-align: center;
+}
+
+.vendor-register-footer p {
+  color: #3f3f3f;
+  font-size: 0.9rem;
+}
+
+.vendor-register-link {
+  background: none;
+  border: none;
+  color: var(--primary-accent);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.vendor-register-link:hover {
+  color: var(--secondary-accent);
+}
+
+/* ===================== Responsive Design ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .vendor-register-card {
+    max-width: 400px;
+    padding: 2rem;
+  }
+
+  .vendor-register-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .vendor-register-input {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem 0.7rem 2.2rem;
+  }
+
+  .vendor-register-btn {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .vendor-register-container {
+    padding: 1rem;
+  }
+
+  .vendor-register-card {
+    max-width: 100%;
+    padding: 1.8rem;
+    border-radius: 12px;
+  }
+
+  .vendor-register-logo .vendor-register-logo-text {
+    font-size: 1.5rem;
+  }
+
+  .vendor-register-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .vendor-register-form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .vendor-register-input {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem 0.7rem 2.2rem;
+  }
+
+  .vendor-register-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .vendor-register-card {
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .vendor-register-logo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .vendor-register-logo .vendor-register-logo-text {
+    font-size: 1.3rem;
+  }
+
+  .vendor-register-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .vendor-register-input {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem 0.6rem 2rem;
+  }
+
+  .vendor-register-btn {
+    font-size: 0.85rem;
+    padding: 0.7rem;
+  }
+}

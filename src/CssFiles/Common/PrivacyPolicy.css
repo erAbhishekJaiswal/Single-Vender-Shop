@@ -1,0 +1,111 @@
+/* Privacy Policy Page Styling */
+.pp-page {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.pp-container {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.pp-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.pp-updated {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.pp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.pp-section h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0072ff;
+  margin-bottom: 0.6rem;
+  border-left: 4px solid #00c6ff;
+  padding-left: 0.6rem;
+}
+
+.pp-section p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pp-section a {
+  color: #0072ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pp-section a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pp-container {
+    padding: 2rem;
+  }
+
+  .pp-title {
+    font-size: 2rem;
+  }
+
+  .pp-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .pp-section p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pp-container {
+    padding: 1.5rem;
+  }
+
+  .pp-title {
+    font-size: 1.7rem;
+  }
+
+  .pp-updated {
+    font-size: 0.8rem;
+  }
+}

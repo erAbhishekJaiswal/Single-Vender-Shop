@@ -1,0 +1,59 @@
+.ecom-order-list {
+  background: white;
+}
+
+.ecom-order-list__header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  font-weight: 600;
+  color: #2c3e50;
+  align-items: center;
+}
+
+.ecom-order-list__items {
+  padding: 0;
+}
+
+.ecom-order-list__summary {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #f8f9fa;
+  background: #fafbfc;
+}
+
+.ecom-order-list__summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ecom-order-list__summary-item span {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.ecom-order-list__summary-item strong {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ecom-order-list__header {
+    display: none;
+  }
+  
+  .ecom-order-list__summary {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+}

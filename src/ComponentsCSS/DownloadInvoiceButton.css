@@ -1,0 +1,91 @@
+.ecom-download-invoice-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecom-download-invoice-btn--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.ecom-download-invoice-btn--primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.ecom-download-invoice-btn--secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.ecom-download-invoice-btn--secondary:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.ecom-download-invoice-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.ecom-download-invoice-btn--loading {
+  background: #6c757d !important;
+  cursor: wait;
+}
+
+.ecom-download-invoice-btn__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: ecom-download-invoice-btn-spin 1s linear infinite;
+}
+
+@keyframes ecom-download-invoice-btn-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success state animation */
+.ecom-download-invoice-btn--success {
+  background: #4caf50 !important;
+}
+
+.ecom-download-invoice-btn--success::after {
+  content: '✓';
+  margin-left: 0.5rem;
+  animation: ecom-download-invoice-btn-bounce 0.5s ease;
+}
+
+@keyframes ecom-download-invoice-btn-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ecom-download-invoice-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}

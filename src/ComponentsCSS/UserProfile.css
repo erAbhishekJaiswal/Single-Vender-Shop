@@ -1,0 +1,356 @@
+/* User Profile Component */
+.user-profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-profile-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.user-profile-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.user-profile-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+.user-profile-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+.user-profile-sidebar {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+    height: fit-content;
+}
+
+.user-profile-avatar {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.user-profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+    margin-bottom: 1rem;
+}
+
+.user-profile-name {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile-email {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.user-profile-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.user-profile-stat {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.user-profile-stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3498db;
+    display: block;
+}
+
+.user-profile-stat-label {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.user-profile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-profile-nav-item {
+    padding: 1rem;
+    text-decoration: none;
+    color: #2c3e50;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.user-profile-nav-item:hover,
+.user-profile-nav-item-active {
+    background: #3498db;
+    color: white;
+}
+
+.user-profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.user-profile-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.user-profile-card-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 1rem;
+}
+
+.user-profile-card-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.user-profile-edit-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-profile-edit-btn:hover {
+    background: #2980b9;
+}
+
+.user-profile-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.user-profile-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-form-group-full {
+    grid-column: 1 / -1;
+}
+
+.user-profile-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.user-profile-input {
+    padding: 0.75rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.user-profile-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.user-profile-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.user-profile-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user-profile-order {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.user-profile-order:hover {
+    border-color: #3498db;
+}
+
+.user-profile-order-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.user-profile-order-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-order-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.user-profile-order-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.user-profile-order-price {
+    font-weight: 700;
+    color: #27ae60;
+    font-size: 1.1rem;
+}
+
+.user-profile-order-status {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.user-profile-status-delivered {
+    background: #d5f5e3;
+    color: #27ae60;
+}
+
+.user-profile-status-pending {
+    background: #fdebd0;
+    color: #f39c12;
+}
+
+.user-profile-status-cancelled {
+    background: #fadbd8;
+    color: #e74c3c;
+}
+
+.user-profile-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.user-profile-save-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-profile-save-btn:hover {
+    background: #219a52;
+}
+
+.user-profile-cancel-btn {
+    background: #95a5a6;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-profile-cancel-btn:hover {
+    background: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .user-profile-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .user-profile-sidebar {
+        order: 2;
+    }
+    
+    .user-profile-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-profile-order {
+        grid-template-columns: 60px 1fr;
+        gap: 0.75rem;
+    }
+    
+    .user-profile-order-price,
+    .user-profile-order-status {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+    
+    .user-profile-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-profile-container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .user-profile-card {
+        padding: 1.5rem;
+    }
+    
+    .user-profile-actions {
+        flex-direction: column;
+    }
+    
+    .user-profile-card-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+}
